@@ -3,3 +3,4 @@ Pillow
 rembg
 # Note: rembg may require torch (PyTorch) on some systems. If install fails, install PyTorch first:
 # pip install torch torchvision
+gunicorn
