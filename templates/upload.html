@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Background Remover Like Slazzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h1>Upload an image to remove background</h1>
+
+<div class="upload-area" id="upload-area">
+  Drag & Drop Image Here or Click to Upload
+  <input type="file" id="file-input" accept="image/png, image/jpeg" />
+  <div class="info-text">Allowed formats: PNG, JPG. Max size: 16MB.</div>
+</div>
+
+<div class="spinner" id="spinner"></div>
+
+<!-- Toggle links above the container -->
+<div id="toggle-links" style="text-align:center; margin-bottom: 10px; display:none;">
+  <a href="#" id="before-link" style="margin-right: 20px; cursor:pointer;">Before</a>
+  <a href="#" id="after-link" style="cursor:pointer;">After</a>
+</div>
+
+<!-- Wrapper around image container and download dropdown -->
+<div id="image-container-wrapper" style="position:relative; width:600px; margin: 0 auto 20px;">
+  <div id="image-container" style="display:none;">
+    <img id="processed-img" src="" alt="Background Removed Image" />
+    <img id="original-img" src="" alt="Original Image" />
+  </div>
+
+  <div class="dropdown" id="download-dropdown" style="display:none;">
+    <button class="dropbtn" id="download-btn">Download</button>
+    <div class="dropdown-content" id="download-menu">
+      <!-- Download options inserted here dynamically -->
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 8px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  flex: 0 0 auto; /* fixed height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.btn-primary {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #059669;
+}
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  border-color: #888;
+}
+
+/* Hero Section */
+.hero {
+  flex: 1 0 auto; /* fill remaining height */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+  background-color: #f3f4f6;
+  min-height: 0; /* important for flex child scaling */
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.btn-upload {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-upload:hover {
+  background-color: #059669;
+}
+
+
+/* Video */
+.hero-video {
+  width: 100%;
+  max-width: 500px; /* smaller width */
+  max-height: 200px; /* limit height */
+  margin: -330px auto 0; /* 20px top margin, centered horizontally */
+}
+
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keep aspect ratio without cropping */
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-text p {
+    margin: 0 auto 1.5rem;
+  }
+}
